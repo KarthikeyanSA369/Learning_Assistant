@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+faiss-cpu
+numpy
+pandas
+groq
+python-dotenv
+mysql-connector-python
+bcrypt
+PyJWT
