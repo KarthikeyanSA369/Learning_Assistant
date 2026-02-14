@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 220 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 12%;
+
+    --primary: 210 80% 30%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 175 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 93%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 175 50% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 210 80% 30%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 30% 12%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 175 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 175 60% 50%;
+
+    /* Color tokens */
+    --primary-color: 210 80% 30%;
+    --accent-color: 175 60% 45%;
+    --light-accent: 175 50% 92%;
+    --gradient: linear-gradient(135deg, hsl(210, 80%, 30%), hsl(175, 60%, 40%));
+    --glow: 0 0 20px hsl(175 60% 45% / 0.3);
+
+    font-family: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 220 10% 92%;
+    --card: 220 28% 12%;
+    --card-foreground: 220 10% 92%;
+    --popover: 220 28% 12%;
+    --popover-foreground: 220 10% 92%;
+    --primary: 175 60% 50%;
+    --primary-foreground: 220 30% 8%;
+    --secondary: 210 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 25% 16%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 175 50% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 175 60% 50%;
+    --sidebar-background: 220 35% 6%;
+    --sidebar-foreground: 220 10% 85%;
+    --sidebar-primary: 175 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent-foreground: 220 10% 85%;
+    --sidebar-border: 220 25% 14%;
+    --sidebar-ring: 175 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  /* Gradient utilities */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(210, 80%, 30%), hsl(175, 60%, 40%));
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(210, 80%, 30%), hsl(175, 60%, 45%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow {
+    box-shadow: 0 0 20px hsl(175 60% 45% / 0.2), 0 0 40px hsl(175 60% 45% / 0.1);
+  }
+
+  /* Brand color utilities */
+  .accent-text {
+    color: hsl(175, 60%, 45%);
+  }
+  .primary-text {
+    color: hsl(210, 80%, 30%);
+  }
+  .primary-bg {
+    background-color: hsl(210, 80%, 30%);
+  }
+  .accent-bg {
+    background-color: hsl(175, 60%, 40%);
+  }
+}
